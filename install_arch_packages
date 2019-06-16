@@ -1,21 +1,22 @@
-#!/bin/bash
+#!/bin/sh
 
-sudo pacman -S xorg \
-       stow \
-       vim \
-       emacs \
-       git \
-       ranger \
-       dunst \
-       newsboat \
-       lxappearance \
-       arandr \
-       sxiv \
-       feh \
-       firefox \
-       xcompmgr \
-			 xwallpaper \
-			 xclip
+sudo pacman -S xorg-server \
+	xorg-xwininfo \
+	xorg-xinit \
+	xcompmgr \
+	xwallpaper \
+	xclip \
+	stow \
+	vim \
+	emacs \
+	git \
+	ranger \
+	dunst \
+	newsboat \
+	lxappearance \
+	arandr \
+	sxiv \
+	firefox
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-	    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 vim +PlugInstall +qall
